@@ -13,13 +13,14 @@ import org.openqa.selenium.safari.SafariDriver;
 
 public class Driver {
 	
-	public static WebDriver driver;
-	public static String browser;
-	public static String url;
-	public static Properties prop = new Properties();
+	public WebDriver driver;
+	public String browser;
+	public String url;
+	public Properties prop;
 	
-	public static WebDriver getDriver() {
+	public WebDriver getDriver() {
 		try (FileInputStream fis = new FileInputStream(new File("./src/main/java/config/Configurations"))){
+			prop = new Properties();
 			prop.load(fis);
 			browser = prop.getProperty("browser");
 			url = prop.getProperty("url");

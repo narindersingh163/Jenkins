@@ -1,1 +1,4 @@
 TestBase/Driver.class
+utilities/TestUtilities.class
+tests/LoginTest.class
+tests/ForgotPassWordTest.class
